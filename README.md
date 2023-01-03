@@ -3,4 +3,4 @@
 
 
 使用方法
-在linux环境下,进入lib目录 然后sudo ./autobuild.sh即可，使用mymuduo编程可以参考lib/example下的echoServer的例子
+在linux环境下,进入lib目录 然后sudo ./autobuild.sh即可，使用mymuduo编程可以参考mymuduo/example下的echoServer的例子
