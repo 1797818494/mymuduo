@@ -1,0 +1,3 @@
+/home/boring/桌面/mymuduo/lib/build/CMakeFiles/rebuild_cache.dir
+/home/boring/桌面/mymuduo/lib/build/CMakeFiles/mymuduo.dir
+/home/boring/桌面/mymuduo/lib/build/CMakeFiles/edit_cache.dir
