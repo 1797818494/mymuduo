@@ -1,20 +1,18 @@
 #pragma once
 
-#include <unistd.h>
 #include <sys/syscall.h>
+#include <unistd.h>
 
-namespace CurrentThread
-{
-    extern __thread int t_cachedTid;
+namespace CurrentThread {
+extern __thread int t_cachedTid;
 
-    void cacheTid();
+void cacheTid();
 
-    inline int tid()
-    {
-        if (__builtin_expect(t_cachedTid == 0, 0))
-        {
-            cacheTid();
-        }
-        return t_cachedTid;
-    }
-} 
+inline int tid() {
+  // 分支提示，大概率为0,以便编译器来优化
+  if (__builtin_expect(t_cachedTid == 0, 0)) {
+    cacheTid();
+  }
+  return t_cachedTid;
+}
+}  // namespace CurrentThread
